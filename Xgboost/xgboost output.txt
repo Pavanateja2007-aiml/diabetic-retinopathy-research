@@ -1,0 +1,161 @@
+Libraries imported successfully.
+
+Output directory: /kaggle/working/XGBoost_Output
+
+Searching for the dataset in Kaggle input...
+
+Dataset successfully detected!
+Actual dataset path: /kaggle/input/datasets/sovitrath/diabetic-retinopathy-2015-data-colored-resized/colored_images/colored_images
+
+Detected Classes:
+ - Mild
+ - Moderate
+ - No_DR
+ - Proliferate_DR
+ - Severe
+
+Original Dataset Distribution:
+         Class  Number of Images
+          Mild              2443
+      Moderate              5292
+         No_DR             25810
+Proliferate_DR               708
+        Severe               873
+
+Starting feature extraction...
+
+Processing Mild: 1000 images
+Processing Moderate: 1000 images
+Processing No_DR: 1000 images
+Processing Proliferate_DR: 708 images
+Processing Severe: 873 images
+Feature extraction completed.
+
+Feature Matrix: (4581, 8207)
+Target Matrix: (4581,)
+Total Processed Images: 4581
+
+Processed Class Distribution:
+Mild              1000
+Moderate          1000
+No_DR             1000
+Proliferate_DR     708
+Severe             873
+Name: count, dtype: int64
+
+Expected feature dimensions: 8206
+Actual feature dimensions: 8207
+
+Class Encoding:
+Mild = 0
+Moderate = 1
+No_DR = 2
+Proliferate_DR = 3
+Severe = 4
+
+Dataset Split:
+Training: (3206, 8207)
+Validation: (687, 8207)
+Testing: (688, 8207)
+
+Class balancing weights calculated.
+
+XGBoost model initialized.
+XGBoost version: 3.4.1
+
+Starting model training...
+[0]	validation_0-mlogloss:1.60172	validation_1-mlogloss:1.60614
+[50]	validation_0-mlogloss:1.32689	validation_1-mlogloss:1.53568
+[100]	validation_0-mlogloss:1.13907	validation_1-mlogloss:1.51946
+[150]	validation_0-mlogloss:0.98884	validation_1-mlogloss:1.51040
+[200]	validation_0-mlogloss:0.86446	validation_1-mlogloss:1.50331
+[250]	validation_0-mlogloss:0.75992	validation_1-mlogloss:1.49994
+
+Model training completed.
+Best iteration: 220
+
+ =======================================================
+Training RESULTS
+=======================================================
+Accuracy: 0.9588
+Macro Precision: 0.9570
+Macro Recall: 0.9604
+Macro F1: 0.9582
+Weighted F1: 0.9590
+
+ =======================================================
+Validation RESULTS
+=======================================================
+Accuracy: 0.2984
+Macro Precision: 0.3001
+Macro Recall: 0.3115
+Macro F1: 0.3037
+Weighted F1: 0.2939
+
+ =======================================================
+Testing RESULTS
+=======================================================
+Accuracy: 0.3256
+Macro Precision: 0.3258
+Macro Recall: 0.3378
+Macro F1: 0.3302
+Weighted F1: 0.3209
+
+Overall Evaluation Results:
+   Dataset  Accuracy  Macro Precision  Macro Recall  Macro F1  Weighted F1
+  Training  0.958827         0.957037      0.960353  0.958210     0.958955
+Validation  0.298399         0.300130      0.311482  0.303717     0.293947
+   Testing  0.325581         0.325778      0.337762  0.330245     0.320908
+
+Final Test Classification Report:
+
+                precision    recall  f1-score   support
+
+          Mild       0.26      0.27      0.27       150
+      Moderate       0.22      0.18      0.20       150
+         No_DR       0.38      0.35      0.36       150
+Proliferate_DR       0.43      0.52      0.47       107
+        Severe       0.34      0.36      0.35       131
+
+      accuracy                           0.33       688
+     macro avg       0.33      0.34      0.33       688
+  weighted avg       0.32      0.33      0.32       688
+
+
+
+ZIP created successfully:
+/kaggle/working/XGBoost_Output.zip
+
+=================================================================
+DIABETIC RETINOPATHY CLASSIFICATION COMPLETED
+=================================================================
+Dataset: /kaggle/input/datasets/sovitrath/diabetic-retinopathy-2015-data-colored-resized/colored_images/colored_images
+Total Images: 4581
+Feature Dimensions: 8207
+Number of Classes: 5
+Training Images: 3206
+Validation Images: 687
+Testing Images: 688
+
+Final Test Accuracy: 0.3256
+Final Test Macro F1: 0.3302
+
+Output Folder: /kaggle/working/XGBoost_Output
+ZIP File: /kaggle/working/XGBoost_Output.zip
+
+Generated Files:
+ - class_distribution.png
+ - classification_report.txt
+ - confusion_matrix.png
+ - diabetic_retinopathy_xgboost.json
+ - diabetic_retinopathy_xgboost.pkl
+ - evaluation_results.csv
+ - experiment_configuration.json
+ - feature_importance.csv
+ - feature_importance.png
+ - label_encoder.pkl
+ - learning_curve.png
+ - test_predictions.csv
+ - training_history.json
+
+ALL EXPERIMENTS COMPLETED SUCCESSFULLY.

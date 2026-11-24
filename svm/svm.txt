@@ -1,0 +1,163 @@
+=================================================================
+DOWNLOADING DIABETIC RETINOPATHY DATASET
+=================================================================
+Downloading to /content/kaggle_data/2.archive...
+100%|██████████| 1.94G/1.94G [01:37<00:00, 21.3MB/s]Extracting files...
+
+
+Dataset downloaded successfully!
+Dataset location: /content/kaggle_data
+
+Detected Dataset Directory: /content/kaggle_data/colored_images/colored_images
+
+Detected Classes:
+- Mild
+- Moderate
+- No_DR
+- Proliferate_DR
+- Severe
+
+DATASET DISTRIBUTION
+Class	Number of Images
+0	Mild	2443
+1	Moderate	5292
+2	No_DR	25810
+3	Proliferate_DR	708
+4	Severe	873
+
+
+
+
+=================================================================
+STARTING IMAGE FEATURE EXTRACTION
+=================================================================
+
+Processing Mild: 1000 images
+Mild: 100%
+ 1000/1000 [00:16<00:00, 65.95it/s]
+
+Processing Moderate: 1000 images
+Moderate: 100%
+ 1000/1000 [00:16<00:00, 68.74it/s]
+
+Processing No_DR: 1000 images
+No_DR: 100%
+ 1000/1000 [00:16<00:00, 65.34it/s]
+
+Processing Proliferate_DR: 708 images
+Proliferate_DR: 100%
+ 708/708 [00:12<00:00, 62.03it/s]
+
+Processing Severe: 873 images
+Severe: 100%
+ 873/873 [00:14<00:00, 68.71it/s]
+
+FEATURE EXTRACTION COMPLETED
+Feature Matrix Shape: (4581, 8206)
+Target Array Shape: (4581,)
+
+Class Distribution After Processing:
+Mild              1000
+Moderate          1000
+No_DR             1000
+Severe             873
+Proliferate_DR     708
+Name: count, dtype: int64
+
+DATASET SPLITTING COMPLETED
+Training Samples: 3206
+Validation Samples: 687
+Testing Samples: 688
+
+Training Percentage: 69.98 %
+Validation Percentage: 15.0 %
+Testing Percentage: 15.02 %
+
+=================================================================
+STARTING SVM HYPERPARAMETER OPTIMIZATION
+=================================================================
+Fitting 3 folds for each of 9 candidates, totalling 27 fits
+
+BEST HYPERPARAMETERS:
+{'svm__C': 10, 'svm__gamma': 'scale'}
+
+BEST CROSS-VALIDATION ACCURACY:
+0.3060
+
+=================================================================
+TRAINING PERFORMANCE
+=================================================================
+Accuracy  : 1.0000
+Precision : 1.0000
+Recall    : 1.0000
+F1 Score  : 1.0000
+
+CLASSIFICATION REPORT
+                precision    recall  f1-score   support
+
+          Mild       1.00      1.00      1.00       700
+      Moderate       1.00      1.00      1.00       700
+         No_DR       1.00      1.00      1.00       700
+Proliferate_DR       1.00      1.00      1.00       495
+        Severe       1.00      1.00      1.00       611
+
+      accuracy                           1.00      3206
+     macro avg       1.00      1.00      1.00      3206
+  weighted avg       1.00      1.00      1.00      3206
+
+
+
+=================================================================
+VALIDATION PERFORMANCE
+=================================================================
+Accuracy  : 0.3130
+Precision : 0.3184
+Recall    : 0.3130
+F1 Score  : 0.3122
+
+CLASSIFICATION REPORT
+                precision    recall  f1-score   support
+
+          Mild       0.31      0.41      0.35       150
+      Moderate       0.27      0.26      0.26       150
+         No_DR       0.27      0.29      0.28       150
+Proliferate_DR       0.41      0.35      0.38       106
+        Severe       0.36      0.26      0.30       131
+
+      accuracy                           0.31       687
+     macro avg       0.32      0.31      0.32       687
+  weighted avg       0.32      0.31      0.31       687
+
+
+
+=================================================================
+TESTING PERFORMANCE
+=================================================================
+Accuracy  : 0.2776
+Precision : 0.2800
+Recall    : 0.2776
+F1 Score  : 0.2771
+
+CLASSIFICATION REPORT
+                precision    recall  f1-score   support
+
+          Mild       0.28      0.33      0.30       150
+      Moderate       0.18      0.17      0.17       150
+         No_DR       0.27      0.31      0.29       150
+Proliferate_DR       0.37      0.32      0.34       107
+        Severe       0.33      0.27      0.30       131
+
+      accuracy                           0.28       688
+     macro avg       0.29      0.28      0.28       688
+  weighted avg       0.28      0.28      0.28       688
+
+
+
+=================================================================
+FINAL SVM PERFORMANCE SUMMARY
+=================================================================
+Dataset	Accuracy	Precision	Recall	F1 Score
+0	Training	1.0000	1.0000	1.0000	1.0000
+1	Validation	0.3130	0.3184	0.3130	0.3122
+2	Testing	0.2776	0.2800	0.2776	0.2771
+<Figure size 1100x600 with 0 Axes>
