@@ -1,0 +1,67 @@
+Using DATA_DIR: /kaggle/input/datasets/sovitrath/diabetic-retinopathy-2015-data-colored-resized/colored_images/colored_images
+Features: (35126, 8206)
+Classes: ['Mild', 'Moderate', 'No_DR', 'Proliferate_DR', 'Severe']
+No_DR             25810
+Moderate           5292
+Mild               2443
+Severe              873
+Proliferate_DR      708
+Name: count, dtype: int64
+ warnings.warn(
+/usr/local/lib/python3.13/dist-packages/sklearn/model_selection/_search.py:1108: UserWarning: One or more of the test scores are non-finite: [0.64909712 0.66406377 0.68334147 0.69721002 0.70920774 0.71648772
+ 0.72092077 0.72478445 0.72612657 0.72909549        nan 0.66776476
+        nan 0.7022938         nan 0.71904994        nan 0.7245811
+        nan 0.72897348]
+  warnings.warn(
+Best Parameters: {'metric': 'euclidean', 'n_neighbors': 11, 'weights': 'distance'}
+CV Accuracy: 0.7290954937367822
+
+Training Accuracy: 1.0000
+                precision    recall  f1-score   support
+
+          Mild       1.00      1.00      1.00      1710
+      Moderate       1.00      1.00      1.00      3704
+         No_DR       1.00      1.00      1.00     18067
+Proliferate_DR       1.00      1.00      1.00       496
+        Severe       1.00      1.00      1.00       611
+
+      accuracy                           1.00     24588
+     macro avg       1.00      1.00      1.00     24588
+  weighted avg       1.00      1.00      1.00     24588
+
+
+Validation Accuracy: 0.7307
+                precision    recall  f1-score   support
+
+          Mild       0.00      0.00      0.00       366
+      Moderate       0.29      0.03      0.05       794
+         No_DR       0.74      0.99      0.85      3872
+Proliferate_DR       0.00      0.00      0.00       106
+        Severe       0.50      0.01      0.02       131
+
+      accuracy                           0.73      5269
+     macro avg       0.30      0.20      0.18      5269
+  weighted avg       0.60      0.73      0.63      5269
+
+
+Testing Accuracy: 0.7297
+                precision    recall  f1-score   support
+
+          Mild       0.50      0.00      0.01       367
+      Moderate       0.23      0.02      0.04       794
+         No_DR       0.74      0.99      0.84      3871
+Proliferate_DR       0.00      0.00      0.00       106
+        Severe       0.00      0.00      0.00       131
+
+      accuracy                           0.73      5269
+     macro avg       0.29      0.20      0.18      5269
+  weighted avg       0.61      0.73      0.63      5269
+
+
+FINAL RESULTS
+      Dataset  Accuracy  Precision  Recall  F1 Score
+0    Training    1.0000     1.0000  1.0000    1.0000
+1  Validation    0.7307     0.5977  0.7307    0.6284
+2     Testing    0.7297     0.6104  0.7297    0.6262
+
+KNN experiment completed.
