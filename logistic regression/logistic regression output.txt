@@ -1,0 +1,61 @@
+Using DATA_DIR: /kaggle/input/datasets/sovitrath/diabetic-retinopathy-2015-data-colored-resized/colored_images/colored_images
+Feature shape: (35126, 8206)
+No_DR             25810
+Moderate           5292
+Mild               2443
+Severe              873
+Proliferate_DR      708
+Name: count, dtype: int64
+Fitting 3 folds for each of 4 candidates, totalling 12 fits
+Best parameters: {'C': 10, 'solver': 'lbfgs'}
+Best CV accuracy: 0.5575890678379697
+
+Training Accuracy: 0.9923
+                precision    recall  f1-score   support
+
+          Mild       1.00      1.00      1.00      1710
+      Moderate       0.95      1.00      0.98      3704
+         No_DR       1.00      0.99      0.99     18067
+Proliferate_DR       1.00      1.00      1.00       496
+        Severe       1.00      1.00      1.00       611
+
+      accuracy                           0.99     24588
+     macro avg       0.99      1.00      0.99     24588
+  weighted avg       0.99      0.99      0.99     24588
+
+
+Validation Accuracy: 0.5286
+                precision    recall  f1-score   support
+
+          Mild       0.08      0.13      0.10       366
+      Moderate       0.19      0.26      0.22       794
+         No_DR       0.75      0.65      0.70      3872
+Proliferate_DR       0.12      0.12      0.12       106
+        Severe       0.09      0.11      0.10       131
+
+      accuracy                           0.53      5269
+     macro avg       0.25      0.25      0.25      5269
+  weighted avg       0.59      0.53      0.56      5269
+
+
+Testing Accuracy: 0.5305
+                precision    recall  f1-score   support
+
+          Mild       0.08      0.12      0.09       367
+      Moderate       0.18      0.24      0.20       794
+         No_DR       0.76      0.65      0.70      3871
+Proliferate_DR       0.13      0.15      0.14       106
+        Severe       0.07      0.09      0.08       131
+
+      accuracy                           0.53      5269
+     macro avg       0.24      0.25      0.24      5269
+  weighted avg       0.60      0.53      0.56      5269
+
+
+LOGISTIC REGRESSION RESULTS
+      Dataset  Accuracy  Precision  Recall  F1 Score
+0    Training    0.9923     0.9927  0.9923    0.9924
+1  Validation    0.5286     0.5928  0.5286    0.5563
+2     Testing    0.5305     0.5968  0.5305    0.5594
+
+Logistic Regression experiment completed.
